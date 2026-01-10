@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DeepSearch | Investigação Digital & OSINT Profissional</title>
+
+    <!-- SEO -->
+    <meta name="description"
+        content="DeepSearch é especializada em investigação digital (OSINT). Identificamos perfis falsos, golpes, fake news e dados manipulados com ética, clareza e metodologia profissional.">
+    <meta name="keywords"
+        content="OSINT, investigação digital, fake news, perfis falsos, análise de dados, verificação de informações">
+    <meta name="author" content="DeepSearch">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="DeepSearch | Investigação Digital">
+    <meta property="og:description" content="Transformamos informações abertas em análises confiáveis.">
+    <meta property="og:type" content="website">
+
+    <style>
+        :root {
+            --black: #0b0f1a;
+            --dark-blue: #0a1f44;
+            --blue: #1e90ff;
+            --white: #ffffff;
+            --gray: #cfd8dc;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(180deg, var(--black), var(--dark-blue));
+            color: var(--white);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* NAV */
+        header {
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            background: rgba(11, 15, 26, 0.8);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+
+        header h1 {
+            color: var(--blue);
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+        }
+
+        header a.cta {
+            background: var(--blue);
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        header a.cta:hover {
+            background: #4aa3ff;
+        }
+
+        /* HERO */
+        .hero {
+            padding: 100px 8%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+        }
+
+        .hero span {
+            color: var(--blue);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--gray);
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons a {
+            display: inline-block;
+            margin-right: 15px;
+            padding: 15px 30px;
+            border-radius: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: var(--blue);
+        }
+
+        .btn-primary:hover {
+            background: #4aa3ff;
+        }
+
+        .btn-secondary {
+            border: 2px solid var(--blue);
+            color: var(--blue);
+        }
+
+        .btn-secondary:hover {
+            background: var(--blue);
+            color: var(--white);
+        }
+
+        .hero-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 0 40px rgba(30, 144, 255, 0.2);
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 80px 8%;
+        }
+
+        section h3 {
+            font-size: 2.3rem;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        section p.subtitle {
+            text-align: center;
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto 50px;
+        }
+
+        /* CARDS */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 30px;
+            border-radius: 20px;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 25px rgba(30, 144, 255, 0.2);
+        }
+
+        .card h4 {
+            margin-bottom: 15px;
+            color: var(--blue);
+        }
+
+        .card p {
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        /* CTA FINAL */
+        .cta-final {
+            text-align: center;
+            background: linear-gradient(135deg, var(--dark-blue), var(--black));
+            border-radius: 30px;
+            padding: 60px 30px;
+        }
+
+        .cta-final h3 {
+            margin-bottom: 20px;
+        }
+
+        .cta-final p {
+            margin-bottom: 30px;
+            color: var(--gray);
+        }
+
+        /* FOOTER */
+        footer {
+            padding: 40px 8%;
+            text-align: center;
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        /* RESPONSIVO */
+        @media (max-width: 900px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>DeepSearch</h1>
+        <a class="cta" href="https://wa.me/5599999999999" target="_blank">Falar com especialista</a>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h2>E se a informação que você confia <span>fosse uma mentira?</span></h2>
+            <p>
+                No mundo digital, dados manipulados, perfis falsos e fake news circulam todos os dias.
+                A DeepSearch transforma fontes abertas em análises confiáveis, com ética, método e clareza.
+            </p>
+            <div class="hero-buttons">
+                <a href="https://wa.me/5599999999999" class="btn-primary">Solicitar análise</a>
+                <a href="#servicos" class="btn-secondary">Conhecer serviços</a>
+            </div>
+        </div>
+
+        <div class="hero-card">
+            <h4>Investigação Digital Profissional</h4>
+            <p>
+                Utilizamos técnicas avançadas de OSINT para entregar relatórios claros,
+                objetivos e prontos para tomada de decisão.
+            </p>
+        </div>
+    </section>
+
+    <section id="servicos">
+        <h3>O que investigamos</h3>
+        <p class="subtitle">Atuamos em diferentes frentes da investigação digital.</p>
+
+        <div class="grid">
+            <div class="card">
+                <h4>Perfis falsos</h4>
+                <p>Identificação de contas fake, golpes, catfishing e perfis manipulados.</p>
+            </div>
+            <div class="card">
+                <h4>Fake News</h4>
+                <p>Análise de origem, disseminação e veracidade de informações.</p>
+            </div>
+            <div class="card">
+                <h4>Investigação OSINT</h4>
+                <p>Coleta e cruzamento de dados públicos com metodologia profissional.</p>
+            </div>
+            <div class="card">
+                <h4>Relatórios técnicos</h4>
+                <p>Documentos claros, organizados e prontos para uso jurídico ou estratégico.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h3>Como funciona</h3>
+        <p class="subtitle">Processo simples, transparente e seguro.</p>
+
+        <div class="grid">
+            <div class="card">
+                <h4>1. Contato</h4>
+                <p>Você apresenta o caso e os dados iniciais.</p>
+            </div>
+            <div class="card">
+                <h4>2. Análise</h4>
+                <p>Avaliamos viabilidade, escopo e metodologia.</p>
+            </div>
+            <div class="card">
+                <h4>3. Investigação</h4>
+                <p>Coleta e cruzamento de informações abertas.</p>
+            </div>
+            <div class="card">
+                <h4>4. Relatório</h4>
+                <p>Entrega de relatório técnico e conclusivo.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-final">
+        <h3>Informação distorcida gera decisões perigosas</h3>
+        <p>Fale com um especialista e descubra a verdade por trás dos dados.</p>
+        <a href="https://wa.me/5599999999999" class="btn-primary">Entrar em contato agora</a>
+    </section>
+
+    <footer>
+        © 2026 DeepSearch — Investigação Digital & OSINT | Ética, Clareza e Confiança
+    </footer>
+
+</body>
+
+</html>
