@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caramelo NET | A Internet que Não Te Abandona</title>
+
+    <style>
+        :root {
+            --amarelo: #FFD700;
+            --verde-zap: #25D366;
+            --azul-brasil: #002776;
+            --caramelo: #D2691E;
+            --fundo: #F4F4F4;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background-color: var(--fundo);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Estilo "Seleção" */
+        header {
+            background: linear-gradient(180deg, var(--amarelo) 0%, #FBC02D 100%);
+            color: var(--azul-brasil);
+            padding: 60px 20px;
+            text-align: center;
+            border-bottom: 8px solid var(--verde-zap);
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            letter-spacing: -1px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 0px #fff;
+        }
+
+        header p {
+            font-size: 1.3rem;
+            font-weight: 700;
+            background: var(--azul-brasil);
+            color: white;
+            display: inline-block;
+            padding: 5px 15px;
+            transform: rotate(-2deg);
+        }
+
+        .container {
+            max-width: 900px;
+            margin: -30px auto 40px;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            border: 2px solid #eee;
+        }
+
+        /* Destaque para gírias e benefícios */
+        .chamada-br {
+            color: var(--caramelo);
+            font-weight: 900;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+
+        .benefit {
+            background: #f9f9f9;
+            padding: 15px;
+            border-left: 5px solid var(--verde-zap);
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        /* Preço com cara de promoção de mercado */
+        .price-box {
+            text-align: center;
+            border: 3px dashed var(--caramelo);
+        }
+
+        .price-tag {
+            background: #ff4444;
+            color: white;
+            display: inline-block;
+            padding: 5px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .price {
+            font-size: 4rem;
+            font-weight: 900;
+            color: var(--azul-brasil);
+            margin: 5px 0;
+        }
+
+        .price span { font-size: 1.2rem; }
+
+        /* Botão WhatsApp Pulsante */
+        .cta-button {
+            display: block;
+            background: var(--verde-zap);
+            color: white;
+            text-decoration: none;
+            padding: 20px;
+            border-radius: 15px;
+            font-size: 1.5rem;
+            font-weight: 900;
+            transition: transform 0.2s;
+            box-shadow: 0 8px 0px #128C7E;
+            margin-top: 20px;
+        }
+
+        .cta-button:active {
+            transform: translateY(4px);
+            box-shadow: 0 4px 0px #128C7E;
+        }
+
+        .trust-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .trust-item {
+            background: var(--azul-brasil);
+            color: white;
+            padding: 15px;
+            border-radius: 12px;
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #666;
+            font-size: 0.8rem;
+        }
+
+        .emoji-big { font-size: 2rem; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>🐕 Caramelo NET</h1>
+    <p>A INTERNET QUE É O BICHO!</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <div class="chamada-br">
+            <span class="emoji-big">🇧🇷</span> 
+            <span>O PAI TÁ ON!</span>
+        </div>
+        <p style="margin-bottom: 20px; font-size: 1.1rem;">
+            Cansado de internet que cai mais que o Neymar? A <strong>Caramelo NET</strong> é o segredo pra você navegar liso, sem travar o vídeo e com aquele ping baixo que a gente respeita.
+        </p>
+
+        <div class="benefits">
+            <div class="benefit">🚀 Velocidade de Fibra no 5G</div>
+            <div class="benefit">🎮 Jogue sem Lag (Ping Baixo)</div>
+            <div class="benefit">🎬 YouTube e Netflix no Talo</div>
+            <div class="benefit">🛡️ Seguro e Sem Rastro</div>
+            <div class="benefit">⚡ Conecta na Hora (Sem Fila)</div>
+            <div class="benefit">👤 Suporte que fala a sua língua</div>
+        </div>
+    </div>
+
+    <div class="card price-box">
+        <div class="price-tag">OFERTA DO DIA</div>
+        <h2>Apenas:</h2>
+        <div class="price"><span>R$</span>20<span>,00</span></div>
+        <p><strong>Uso Ilimitado por 30 Dias</strong></p>
+        
+        <a href="https://wa.me/5511999999999" class="cta-button">
+            CHAMA NO ZAP (ATIVO AGORA) 🚀
+        </a>
+        <p style="margin-top: 15px; font-size: 0.8rem; color: #666;">
+            Pagou via PIX, conectou na hora. Sem burocracia!
+        </p>
+    </div>
+
+    <div class="trust-grid">
+        <div class="trust-item">✅ 100% Brasileiro</div>
+        <div class="trust-item">🛡️ Sem Fidelidade</div>
+        <div class="trust-item">🔥 Servidor Premium</div>
+        <div class="trust-item">🤝 Satisfação ou o PIX de volta</div>
+    </div>
+
+</div>
+
+<footer>
+    <p>Caramelo NET © 2026 - Feito com ❤️ para o Brasil.</p>
+    <p>Proibido navegar devagar!</p>
+</footer>
+
+</body>
+</html>
