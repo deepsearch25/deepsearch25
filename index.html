@@ -4,178 +4,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>DeepSearch | Investigação Digital & OSINT Profissional</title>
 
-    <!-- SEO -->
-    <meta name="description"
-        content="DeepSearch é especializada em investigação digital (OSINT). Identificamos perfis falsos, golpes, fake news e dados manipulados com ética, clareza e metodologia profissional.">
-    <meta name="keywords"
-        content="OSINT, investigação digital, fake news, perfis falsos, análise de dados, verificação de informações">
-    <meta name="author" content="DeepSearch">
-    <meta name="robots" content="index, follow">
-
-    <!-- Open Graph -->
-    <meta property="og:title" content="DeepSearch | Investigação Digital">
-    <meta property="og:description" content="Transformamos informações abertas em análises confiáveis.">
-    <meta property="og:type" content="website">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
         :root {
-            --black: #0b0f1a;
-            --dark-blue: #0a1f44;
-            --blue: #1e90ff;
+            --black: #05070a;
+            --dark-blue: #0a1321;
+            --blue: #0070f3;
+            --light-blue: #00dfd8;
             --white: #ffffff;
-            --gray: #cfd8dc;
+            --gray: #94a3b8;
+            --glass: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.1);
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
         }
 
         body {
-            background: linear-gradient(180deg, var(--black), var(--dark-blue));
+            background-color: var(--black);
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(0, 112, 243, 0.15) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(0, 223, 216, 0.1) 0%, transparent 40%);
             color: var(--white);
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
-
-        /* NAV */
+        /* HEADER */
         header {
             padding: 20px 8%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: sticky;
+            position: fixed;
+            width: 100%;
             top: 0;
-            background: rgba(11, 15, 26, 0.8);
-            backdrop-filter: blur(10px);
-            z-index: 100;
+            background: rgba(5, 7, 10, 0.8);
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid var(--glass-border);
+            z-index: 1000;
         }
 
-        header h1 {
-            color: var(--blue);
-            font-size: 1.8rem;
-            letter-spacing: 1px;
-        }
-
-        header a.cta {
-            background: var(--blue);
-            padding: 10px 20px;
-            border-radius: 30px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-
-        header a.cta:hover {
-            background: #4aa3ff;
-        }
-
-        /* HERO */
-        .hero {
-            padding: 100px 8%;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 50px;
+        .logo {
+            font-weight: 800;
+            font-size: 1.5rem;
+            color: var(--white);
+            display: flex;
             align-items: center;
+            gap: 10px;
         }
 
-        .hero h2 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-        }
-
-        .hero span {
+        .logo span {
             color: var(--blue);
         }
 
-        .hero p {
-            font-size: 1.1rem;
-            color: var(--gray);
-            margin-bottom: 30px;
-        }
-
-        .hero-buttons a {
-            display: inline-block;
-            margin-right: 15px;
-            padding: 15px 30px;
-            border-radius: 40px;
-            font-weight: bold;
-            transition: 0.3s;
+        /* BUTTONS */
+        .btn {
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            text-decoration: none;
         }
 
         .btn-primary {
             background: var(--blue);
+            color: white;
+            box-shadow: 0 4px 15px rgba(0, 112, 243, 0.3);
         }
 
         .btn-primary:hover {
-            background: #4aa3ff;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 112, 243, 0.5);
+            background: #0061d1;
         }
 
         .btn-secondary {
-            border: 2px solid var(--blue);
-            color: var(--blue);
-        }
-
-        .btn-secondary:hover {
-            background: var(--blue);
+            border: 1px solid var(--glass-border);
+            background: var(--glass);
             color: var(--white);
         }
 
-        .hero-card {
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 0 40px rgba(30, 144, 255, 0.2);
+        .btn-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
         }
 
-        /* SECTIONS */
-        section {
-            padding: 80px 8%;
+        /* HERO */
+        .hero {
+            padding: 180px 8% 100px;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 60px;
+            align-items: center;
         }
 
-        section h3 {
-            font-size: 2.3rem;
-            margin-bottom: 20px;
-            text-align: center;
+        .hero h2 {
+            font-size: 3.5rem;
+            line-height: 1.1;
+            margin-bottom: 25px;
+            font-weight: 800;
         }
 
-        section p.subtitle {
-            text-align: center;
+        .hero h2 span {
+            background: linear-gradient(90deg, var(--blue), var(--light-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
             color: var(--gray);
-            max-width: 700px;
-            margin: 0 auto 50px;
+            margin-bottom: 40px;
+            max-width: 600px;
         }
 
-        /* CARDS */
+        .hero-buttons {
+            display: flex;
+            gap: 20px;
+        }
+
+        /* FLOATING CARD */
+        .hero-card {
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            border-radius: 24px;
+            padding: 40px;
+            position: relative;
+            backdrop-filter: blur(10px);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .hero-card i {
+            font-size: 2rem;
+            color: var(--blue);
+            margin-bottom: 20px;
+        }
+
+        /* SERVICES */
+        section { padding: 100px 8%; }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h3 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
         }
 
         .card {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 30px;
+            background: var(--glass);
+            border: 1px solid var(--glass-border);
+            padding: 40px;
             border-radius: 20px;
-            transition: 0.3s;
+            transition: all 0.4s ease;
         }
 
         .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 0 25px rgba(30, 144, 255, 0.2);
+            background: rgba(255, 255, 255, 0.06);
+            border-color: var(--blue);
+            transform: translateY(-10px);
+        }
+
+        .card i {
+            font-size: 1.5rem;
+            color: var(--blue);
+            margin-bottom: 20px;
         }
 
         .card h4 {
+            font-size: 1.3rem;
             margin-bottom: 15px;
-            color: var(--blue);
         }
 
         .card p {
@@ -183,42 +207,54 @@
             font-size: 0.95rem;
         }
 
-        /* CTA FINAL */
+        /* FINAL CTA */
         .cta-final {
+            margin: 0 8% 100px;
+            background: linear-gradient(135deg, #001e4d 0%, #000 100%);
+            border-radius: 40px;
+            padding: 80px 40px;
             text-align: center;
-            background: linear-gradient(135deg, var(--dark-blue), var(--black));
-            border-radius: 30px;
-            padding: 60px 30px;
+            border: 1px solid var(--glass-border);
         }
 
-        .cta-final h3 {
-            margin-bottom: 20px;
+        .cta-final h3 { font-size: 2.5rem; margin-bottom: 20px; }
+        .cta-final p { margin-bottom: 40px; color: var(--gray); font-size: 1.2rem; }
+
+        .phones-container {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
         }
 
-        .cta-final p {
-            margin-bottom: 30px;
-            color: var(--gray);
+        .phone-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--blue);
+            font-weight: 600;
         }
 
         /* FOOTER */
         footer {
-            padding: 40px 8%;
+            padding: 60px 8%;
+            border-top: 1px solid var(--glass-border);
             text-align: center;
             color: var(--gray);
-            font-size: 0.9rem;
         }
 
-        /* RESPONSIVO */
-        @media (max-width: 900px) {
+        /* RESPONSIVE */
+        @media (max-width: 968px) {
             .hero {
                 grid-template-columns: 1fr;
                 text-align: center;
+                padding-top: 140px;
             }
-
-            header {
-                flex-direction: column;
-                gap: 15px;
-            }
+            .hero p { margin: 0 auto 40px; }
+            .hero-buttons { justify-content: center; flex-direction: column; }
+            .hero h2 { font-size: 2.5rem; }
+            header { padding: 15px 5%; }
         }
     </style>
 </head>
@@ -226,90 +262,79 @@
 <body>
 
     <header>
-        <h1>DeepSearch</h1>
-        <a class="cta" href="https://wa.me/5599999999999" target="_blank">Falar com especialista</a>
+        <div class="logo"><i class="fas fa-shield-halved"></i> Deep<span>Search</span></div>
+        <a class="btn btn-primary" href="https://wa.me/5511933090358" target="_blank">
+            <i class="fab fa-whatsapp"></i> Falar com Especialista
+        </a>
     </header>
 
     <section class="hero">
         <div>
-            <h2>E se a informação que você confia <span>fosse uma mentira?</span></h2>
+            <h2>A verdade escondida sob a <span>superfície digital.</span></h2>
             <p>
-                No mundo digital, dados manipulados, perfis falsos e fake news circulam todos os dias.
-                A DeepSearch transforma fontes abertas em análises confiáveis, com ética, método e clareza.
+                No cenário de desinformação atual, a DeepSearch utiliza inteligência OSINT de ponta para validar fatos, identificar riscos e desmascarar fraudes.
             </p>
             <div class="hero-buttons">
-                <a href="https://wa.me/5599999999999" class="btn-primary">Solicitar análise</a>
-                <a href="#servicos" class="btn-secondary">Conhecer serviços</a>
+                <a href="https://wa.me/5511916971891" class="btn btn-primary">Iniciar Investigação</a>
+                <a href="#servicos" class="btn btn-secondary">Nossas Soluções</a>
             </div>
         </div>
 
         <div class="hero-card">
-            <h4>Investigação Digital Profissional</h4>
-            <p>
-                Utilizamos técnicas avançadas de OSINT para entregar relatórios claros,
-                objetivos e prontos para tomada de decisão.
-            </p>
+            <i class="fas fa-microscope"></i>
+            <h4>Análise Metódica</h4>
+            <p>Não entregamos apenas dados, entregamos inteligência pronta para suporte jurídico e decisões estratégicas.</p>
         </div>
     </section>
 
     <section id="servicos">
-        <h3>O que investigamos</h3>
-        <p class="subtitle">Atuamos em diferentes frentes da investigação digital.</p>
-
-        <div class="grid">
-            <div class="card">
-                <h4>Perfis falsos</h4>
-                <p>Identificação de contas fake, golpes, catfishing e perfis manipulados.</p>
-            </div>
-            <div class="card">
-                <h4>Fake News</h4>
-                <p>Análise de origem, disseminação e veracidade de informações.</p>
-            </div>
-            <div class="card">
-                <h4>Investigação OSINT</h4>
-                <p>Coleta e cruzamento de dados públicos com metodologia profissional.</p>
-            </div>
-            <div class="card">
-                <h4>Relatórios técnicos</h4>
-                <p>Documentos claros, organizados e prontos para uso jurídico ou estratégico.</p>
-            </div>
+        <div class="section-title">
+            <h3>Nossa Expertise</h3>
+            <p style="color: var(--gray)">Metodologia profissional para quem busca clareza.</p>
         </div>
-    </section>
-
-    <section>
-        <h3>Como funciona</h3>
-        <p class="subtitle">Processo simples, transparente e seguro.</p>
 
         <div class="grid">
             <div class="card">
-                <h4>1. Contato</h4>
-                <p>Você apresenta o caso e os dados iniciais.</p>
+                <i class="fas fa-user-secret"></i>
+                <h4>Perfis & Identidades</h4>
+                <p>Rastreamento e identificação de perfis falsos, golpes financeiros e casos de catfishing.</p>
             </div>
             <div class="card">
-                <h4>2. Análise</h4>
-                <p>Avaliamos viabilidade, escopo e metodologia.</p>
+                <i class="fas fa-bullhorn"></i>
+                <h4>Contenção de Fake News</h4>
+                <p>Mapeamento de origem e fluxo de propagação de campanhas de desinformação.</p>
             </div>
             <div class="card">
-                <h4>3. Investigação</h4>
-                <p>Coleta e cruzamento de informações abertas.</p>
+                <i class="fas fa-database"></i>
+                <h4>OSINT Avançado</h4>
+                <p>Coleta de dados em fontes abertas cruzando centenas de camadas de informação.</p>
             </div>
             <div class="card">
-                <h4>4. Relatório</h4>
-                <p>Entrega de relatório técnico e conclusivo.</p>
+                <i class="fas fa-file-contract"></i>
+                <h4>Relatórios Técnicos</h4>
+                <p>Documentação detalhada com validade para processos judiciais e auditorias.</p>
             </div>
         </div>
     </section>
 
     <section class="cta-final">
-        <h3>Informação distorcida gera decisões perigosas</h3>
-        <p>Fale com um especialista e descubra a verdade por trás dos dados.</p>
-        <a href="https://wa.me/5599999999999" class="btn-primary">Entrar em contato agora</a>
+        <h3>Decisões baseadas em mentiras custam caro.</h3>
+        <p>Antecipe-se ao risco. Fale com um investigador agora mesmo.</p>
+
+        <a href="https://wa.me/5511933090358" class="btn btn-primary" style="padding: 18px 45px; font-size: 1.1rem;">
+            Solicitar Análise Imediata
+        </a>
+
+        <div class="phones-container">
+            <div class="phone-item"><i class="fas fa-phone"></i> +55 11 93309-0358</div>
+            <div class="phone-item"><i class="fas fa-phone"></i> +55 11 91697-1891</div>
+        </div>
     </section>
 
     <footer>
-        © 2026 DeepSearch — Investigação Digital & OSINT | Ética, Clareza e Confiança
+        <p>© 2026 DeepSearch — Inteligência em Investigação Digital</p>
+        <p style="font-size: 0.8rem; margin-top: 10px;">Atendimento em conformidade com a LGPD e ética profissional.</p>
     </footer>
 
 </body>
-
 </html>
