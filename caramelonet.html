@@ -3,226 +3,249 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Caramelo NET | A Internet que Não Te Abandona</title>
+    <title>Caramelo NET | É isso que o BR gosta!</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 
     <style>
         :root {
             --amarelo: #FFD700;
             --verde-zap: #25D366;
-            --azul-brasil: #002776;
+            --azul-br: #002776;
             --caramelo: #D2691E;
-            --fundo: #F4F4F4;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', 'Segoe UI', sans-serif;
         }
 
         body {
-            background-color: var(--fundo);
-            color: #333;
-            line-height: 1.6;
+            background-color: #f0f2f5;
+            font-family: 'Inter', sans-serif;
         }
 
-        /* Header Estilo "Seleção" */
-        header {
-            background: linear-gradient(180deg, var(--amarelo) 0%, #FBC02D 100%);
-            color: var(--azul-brasil);
-            padding: 60px 20px;
+        /* Header Estilo Relíquia/Raiz */
+        .hero-section {
+            background: linear-gradient(180deg, var(--amarelo) 0%, #ffc107 100%);
+            color: var(--azul-br);
+            padding: 60px 0;
+            border-bottom: 10px solid var(--verde-zap);
             text-align: center;
-            border-bottom: 8px solid var(--verde-zap);
-            position: relative;
         }
 
-        header h1 {
-            font-size: 3rem;
-            text-transform: uppercase;
-            letter-spacing: -1px;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 0px #fff;
+        .hero-section h1 {
+            font-family: 'Black Ops One', cursive; /* Fonte estilo militar/game */
+            font-size: 3.5rem;
+            text-shadow: 3px 3px 0px #fff;
+            margin-bottom: 15px;
         }
 
-        header p {
-            font-size: 1.3rem;
-            font-weight: 700;
-            background: var(--azul-brasil);
+        .badge-br {
+            background: var(--azul-br);
             color: white;
-            display: inline-block;
-            padding: 5px 15px;
-            transform: rotate(-2deg);
-        }
-
-        .container {
-            max-width: 900px;
-            margin: -30px auto 40px;
-            padding: 0 20px;
-        }
-
-        .card {
-            background: #fff;
-            border-radius: 20px;
-            padding: 30px;
-            margin-bottom: 25px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
-            border: 2px solid #eee;
-        }
-
-        /* Destaque para gírias e benefícios */
-        .chamada-br {
-            color: var(--caramelo);
+            padding: 8px 20px;
             font-weight: 900;
-            font-size: 1.5rem;
-            margin-bottom: 20px;
+            transform: skewX(-10deg);
+            display: inline-block;
+        }
+
+        /* Cards e Layout */
+        .card-reliquia {
+            border: none;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+            background: white;
+        }
+
+        .card-header-br {
+            background: var(--azul-br);
+            color: white;
+            padding: 15px;
+            font-weight: bold;
+            font-size: 1.2rem;
             display: flex;
             align-items: center;
             gap: 10px;
         }
 
-        .benefits {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        .benefit-item {
+            display: flex;
+            align-items: center;
             gap: 15px;
+            padding: 12px;
+            border-bottom: 1px solid #eee;
         }
 
-        .benefit {
-            background: #f9f9f9;
-            padding: 15px;
-            border-left: 5px solid var(--verde-zap);
-            border-radius: 8px;
-            font-size: 0.95rem;
-            font-weight: 600;
-        }
-
-        /* Preço com cara de promoção de mercado */
-        .price-box {
+        .benefit-item i {
+            color: var(--verde-zap);
+            font-size: 1.5rem;
+            width: 30px;
             text-align: center;
-            border: 3px dashed var(--caramelo);
         }
 
-        .price-tag {
-            background: #ff4444;
-            color: white;
-            display: inline-block;
-            padding: 5px 20px;
-            border-radius: 50px;
-            font-weight: bold;
-            margin-bottom: 10px;
+        /* Sessão de Preço Impactante */
+        .price-container {
+            border: 4px dashed var(--caramelo);
+            background: #fffdf0;
+            border-radius: 20px;
+            padding: 30px;
         }
 
-        .price {
-            font-size: 4rem;
+        .price-value {
+            font-size: 5rem;
             font-weight: 900;
-            color: var(--azul-brasil);
-            margin: 5px 0;
+            color: var(--azul-br);
+            line-height: 1;
         }
 
-        .price span { font-size: 1.2rem; }
+        .price-currency {
+            font-size: 1.5rem;
+            vertical-align: top;
+        }
 
-        /* Botão WhatsApp Pulsante */
-        .cta-button {
-            display: block;
-            background: var(--verde-zap);
+        /* Botão Zap Gigante */
+        .btn-zap {
+            background-color: var(--verde-zap);
             color: white;
-            text-decoration: none;
+            font-size: 1.8rem;
+            font-weight: 900;
             padding: 20px;
             border-radius: 15px;
-            font-size: 1.5rem;
-            font-weight: 900;
-            transition: transform 0.2s;
+            border: none;
             box-shadow: 0 8px 0px #128C7E;
-            margin-top: 20px;
-        }
-
-        .cta-button:active {
-            transform: translateY(4px);
-            box-shadow: 0 4px 0px #128C7E;
-        }
-
-        .trust-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
-            margin-top: 30px;
-        }
-
-        .trust-item {
-            background: var(--azul-brasil);
-            color: white;
-            padding: 15px;
-            border-radius: 12px;
+            transition: all 0.2s;
+            text-decoration: none;
+            display: block;
             text-align: center;
-            font-size: 0.9rem;
-            font-weight: bold;
+        }
+
+        .btn-zap:hover {
+            color: white;
+            transform: translateY(2px);
+            box-shadow: 0 6px 0px #128C7E;
+        }
+
+        .btn-zap:active {
+            transform: translateY(6px);
+            box-shadow: 0 2px 0px #128C7E;
         }
 
         footer {
-            text-align: center;
-            padding: 40px;
-            color: #666;
-            font-size: 0.8rem;
+            background: #222;
+            color: white;
+            padding: 40px 0;
+            margin-top: 50px;
         }
-
-        .emoji-big { font-size: 2rem; }
     </style>
 </head>
 <body>
 
-<header>
-    <h1>🐕 Caramelo NET</h1>
-    <p>A INTERNET QUE É O BICHO!</p>
-</header>
-
-<div class="container">
-
-    <div class="card">
-        <div class="chamada-br">
-            <span class="emoji-big">🇧🇷</span> 
-            <span>O PAI TÁ ON!</span>
-        </div>
-        <p style="margin-bottom: 20px; font-size: 1.1rem;">
-            Cansado de internet que cai mais que o Neymar? A <strong>Caramelo NET</strong> é o segredo pra você navegar liso, sem travar o vídeo e com aquele ping baixo que a gente respeita.
-        </p>
-
-        <div class="benefits">
-            <div class="benefit">🚀 Velocidade de Fibra no 5G</div>
-            <div class="benefit">🎮 Jogue sem Lag (Ping Baixo)</div>
-            <div class="benefit">🎬 YouTube e Netflix no Talo</div>
-            <div class="benefit">🛡️ Seguro e Sem Rastro</div>
-            <div class="benefit">⚡ Conecta na Hora (Sem Fila)</div>
-            <div class="benefit">👤 Suporte que fala a sua língua</div>
+<section class="hero-section">
+    <div class="container">
+        <h1><i class="fa-solid fa-dog"></i> CARAMELO NET</h1>
+        <div class="badge-br">
+            <i class="fa-solid fa-star"></i> É ISSO QUE O BR GOSTA!
         </div>
     </div>
+</section>
 
-    <div class="card price-box">
-        <div class="price-tag">OFERTA DO DIA</div>
-        <h2>Apenas:</h2>
-        <div class="price"><span>R$</span>20<span>,00</span></div>
-        <p><strong>Uso Ilimitado por 30 Dias</strong></p>
+<div class="container" style="margin-top: -40px;">
+    <div class="row g-4 justify-content-center">
         
-        <a href="https://wa.me/5511999999999" class="cta-button">
-            CHAMA NO ZAP (ATIVO AGORA) 🚀
-        </a>
-        <p style="margin-top: 15px; font-size: 0.8rem; color: #666;">
-            Pagou via PIX, conectou na hora. Sem burocracia!
-        </p>
+        <div class="col-lg-7">
+            <div class="card card-reliquia h-100">
+                <div class="card-header-br">
+                    <i class="fa-solid fa-bolt"></i> O QUE VOCÊ LEVA:
+                </div>
+                <div class="card-body p-4">
+                    <p class="lead fw-bold">Chega de sofrer com conexão carroça! Aqui o sistema é bruto.</p>
+                    
+                    <div class="benefit-item">
+                        <i class="fa-solid fa-gauge-high"></i>
+                        <span><strong>Velocidade Ultra:</strong> Vídeos em 4K sem rodinha de carregamento.</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fa-solid fa-gamepad"></i>
+                        <span><strong>Ping Baixo:</strong> Jogue seu Free Fire ou Wild Rift sem lag.</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fa-solid fa-user-shield"></i>
+                        <span><strong>Privacidade Total:</strong> Navegue sem operadora te vigiando.</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fa-solid fa-headset"></i>
+                        <span><strong>Suporte Humano:</strong> Sem robô, a gente resolve no papo.</span>
+                    </div>
+                    <div class="benefit-item">
+                        <i class="fa-solid fa-unlock"></i>
+                        <span><strong>Sem Limites:</strong> Baixe o que quiser, quando quiser.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-5">
+            <div class="card card-reliquia price-container text-center">
+                <h3 class="fw-black text-uppercase" style="color: var(--caramelo)">Plano Elite BR</h3>
+                <div class="price-value">
+                    <span class="price-currency">R$</span>20<span class="price-currency">,00</span>
+                </div>
+                <p class="fw-bold text-muted">Acesso ilimitado / 30 dias</p>
+                <hr>
+                <ul class="list-unstyled text-start mx-auto d-inline-block" style="font-weight: 600;">
+                    <li><i class="fa-solid fa-check text-success"></i> Servidor BR Premium</li>
+                    <li><i class="fa-solid fa-check text-success"></i> Entrega via PIX na hora</li>
+                    <li><i class="fa-solid fa-check text-success"></i> Login Individual</li>
+                </ul>
+
+                <a href="https://wa.me/5511916971891" class="btn-zap mt-4">
+                    <i class="fa-brands fa-whatsapp"></i> QUERO AGORA!
+                </a>
+                <small class="d-block mt-3 text-muted italic">Vagas limitadas para manter a velocidade!</small>
+            </div>
+        </div>
+
     </div>
 
-    <div class="trust-grid">
-        <div class="trust-item">✅ 100% Brasileiro</div>
-        <div class="trust-item">🛡️ Sem Fidelidade</div>
-        <div class="trust-item">🔥 Servidor Premium</div>
-        <div class="trust-item">🤝 Satisfação ou o PIX de volta</div>
+    <div class="row mt-5 g-3">
+        <div class="col-6 col-md-3">
+            <div class="text-center p-3 bg-white rounded-3 shadow-sm border-bottom border-primary border-3">
+                <i class="fa-solid fa-shield-halved fa-2x mb-2 text-primary"></i>
+                <div class="small fw-bold text-uppercase">100% Seguro</div>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="text-center p-3 bg-white rounded-3 shadow-sm border-bottom border-success border-3">
+                <i class="fa-solid fa-bolt-lightning fa-2x mb-2 text-success"></i>
+                <div class="small fw-bold text-uppercase">Ativo na Hora</div>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="text-center p-3 bg-white rounded-3 shadow-sm border-bottom border-warning border-3">
+                <i class="fa-solid fa-handshake fa-2x mb-2 text-warning"></i>
+                <div class="small fw-bold text-uppercase">Sem Fidelidade</div>
+            </div>
+        </div>
+        <div class="col-6 col-md-3">
+            <div class="text-center p-3 bg-white rounded-3 shadow-sm border-bottom border-danger border-3">
+                <i class="fa-solid fa-satellite-dish fa-2x mb-2 text-danger"></i>
+                <div class="small fw-bold text-uppercase">Rede Global</div>
+            </div>
+        </div>
     </div>
-
 </div>
 
 <footer>
-    <p>Caramelo NET © 2026 - Feito com ❤️ para o Brasil.</p>
-    <p>Proibido navegar devagar!</p>
+    <div class="container text-center">
+        <p class="mb-1 fw-bold text-uppercase">Caramelo NET - A Internet Raiz do Brasil</p>
+        <p class="small text-muted">© 2026 • Todos os direitos reservados. Conectando você ao que importa.</p>
+        <div class="mt-3">
+            <i class="fa-brands fa-cc-visa mx-2 fa-2x"></i>
+            <i class="fa-brands fa-cc-mastercard mx-2 fa-2x"></i>
+            <i class="fa-solid fa-pix mx-2 fa-2x"></i>
+        </div>
+    </div>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
