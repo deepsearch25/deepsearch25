@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Diamantes Free Fire | Recarga segura e garantida</title>
+  <meta name="description" content="Recarga de diamantes Free Fire com rapidez, segurança e garantia. A partir de 1.060 diamantes. Atendimento via Telegram." />
+  <meta name="robots" content="index,follow" />
+
+  <style>
+    :root{
+      --bg: #0b0f1a;
+      --card: rgba(255,255,255,.06);
+      --card2: rgba(255,255,255,.09);
+      --text: #eaf0ff;
+      --muted: rgba(234,240,255,.72);
+      --line: rgba(234,240,255,.14);
+      --brand: #8b5cf6;
+      --brand2: #22c55e;
+      --warn: #f59e0b;
+      --danger: #ef4444;
+      --shadow: 0 18px 60px rgba(0,0,0,.55);
+      --radius: 18px;
+      --radius2: 26px;
+      --max: 1060px;
+    }
+
+    *{ box-sizing:border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      color: var(--text);
+      background:
+        radial-gradient(1000px 700px at 15% 10%, rgba(139,92,246,.35), transparent 60%),
+        radial-gradient(900px 600px at 90% 15%, rgba(34,197,94,.25), transparent 55%),
+        radial-gradient(900px 600px at 50% 110%, rgba(245,158,11,.12), transparent 60%),
+        linear-gradient(180deg, #070a12, var(--bg));
+      overflow-x:hidden;
+    }
+
+    a{ color:inherit; text-decoration:none; }
+    .wrap{ max-width: var(--max); margin:0 auto; padding: 28px 18px 80px; }
+
+    /* Top bar */
+    .topbar{
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      backdrop-filter: blur(10px);
+      background: rgba(7,10,18,.55);
+      border-bottom: 1px solid var(--line);
+    }
+    .topbar .inner{
+      max-width: var(--max);
+      margin:0 auto;
+      padding: 14px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight: 800;
+      letter-spacing: .2px;
+    }
+    .logo{
+      width:38px;height:38px;border-radius: 12px;
+      background: linear-gradient(135deg, rgba(139,92,246,1), rgba(34,197,94,1));
+      box-shadow: 0 14px 35px rgba(139,92,246,.22);
+      position:relative;
+    }
+    .logo:after{
+      content:"";
+      position:absolute; inset:10px;
+      border-radius:10px;
+      background: rgba(7,10,18,.5);
+      border: 1px solid rgba(255,255,255,.12);
+    }
+    .nav-actions{ display:flex; gap:10px; align-items:center; }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding: 11px 14px;
+      border-radius: 14px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.05);
+      color: var(--text);
+      font-weight: 700;
+      cursor:pointer;
+      transition: transform .15s ease, background .15s ease, border-color .15s ease;
+      white-space: nowrap;
+    }
+    .btn:hover{ transform: translateY(-1px); background: rgba(255,255,255,.08); border-color: rgba(234,240,255,.22); }
+    .btn.primary{
+      border-color: rgba(139,92,246,.5);
+      background: linear-gradient(135deg, rgba(139,92,246,.95), rgba(99,102,241,.75));
+      box-shadow: 0 18px 55px rgba(139,92,246,.25);
+    }
+    .btn.primary:hover{ background: linear-gradient(135deg, rgba(139,92,246,1), rgba(99,102,241,.9)); }
+    .btn.green{
+      border-color: rgba(34,197,94,.45);
+      background: linear-gradient(135deg, rgba(34,197,94,.95), rgba(16,185,129,.7));
+      box-shadow: 0 18px 55px rgba(34,197,94,.18);
+    }
+    .btn.green:hover{ background: linear-gradient(135deg, rgba(34,197,94,1), rgba(16,185,129,.85)); }
+
+    /* Hero */
+    .hero{
+      margin-top: 26px;
+      display:grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+    @media (max-width: 920px){ .hero{ grid-template-columns:1fr; } }
+
+    .card{
+      border: 1px solid var(--line);
+      background: var(--card);
+      border-radius: var(--radius2);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+    .card .pad{ padding: 22px; }
+    .card:before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background: radial-gradient(700px 240px at 10% 10%, rgba(139,92,246,.22), transparent 55%),
+                  radial-gradient(700px 240px at 90% 20%, rgba(34,197,94,.16), transparent 50%);
+      pointer-events:none;
+    }
+    .card > *{ position:relative; z-index:1; }
+
+    .pill-row{ display:flex; flex-wrap:wrap; gap:10px; margin-bottom: 12px; }
+    .pill{
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .3px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.05);
+      color: var(--muted);
+    }
+    .pill strong{ color: var(--text); }
+
+    h1{
+      margin: 6px 0 10px;
+      line-height:1.08;
+      font-size: clamp(28px, 4vw, 46px);
+      letter-spacing: -.4px;
+    }
+    .sub{
+      color: var(--muted);
+      font-size: 15.5px;
+      line-height: 1.55;
+      max-width: 62ch;
+    }
+    .cta-row{ display:flex; flex-wrap:wrap; gap:10px; margin-top: 16px; }
+    .tiny{
+      margin-top: 12px;
+      color: rgba(234,240,255,.55);
+      font-size: 12.5px;
+      line-height:1.45;
+    }
+
+    /* Prices */
+    .grid{
+      margin-top: 18px;
+      display:grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    @media (max-width: 620px){ .grid{ grid-template-columns:1fr; } }
+    .price{
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.05);
+      border-radius: var(--radius);
+      padding: 16px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap: 12px;
+      transition: transform .15s ease, border-color .15s ease, background .15s ease;
+    }
+    .price:hover{ transform: translateY(-1px); border-color: rgba(234,240,255,.24); background: rgba(255,255,255,.07); }
+    .price .left{ display:flex; flex-direction:column; gap:4px; }
+    .price .title{ font-weight: 900; letter-spacing: .2px; }
+    .price .meta{ color: var(--muted); font-size: 13px; }
+    .price .value{
+      font-weight: 1000;
+      font-size: 18px;
+      padding: 10px 12px;
+      border-radius: 14px;
+      background: rgba(139,92,246,.18);
+      border: 1px solid rgba(139,92,246,.35);
+      white-space:nowrap;
+    }
+
+    /* Side card */
+    .list{
+      display:flex;
+      flex-direction:column;
+      gap: 10px;
+      margin-top: 12px;
+    }
+    .item{
+      display:flex; gap:12px; align-items:flex-start;
+      padding: 14px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.05);
+    }
+    .dot{
+      width: 38px; height: 38px;
+      border-radius: 14px;
+      flex: 0 0 38px;
+      display:grid; place-items:center;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,.06);
+    }
+    .item h3{
+      margin: 1px 0 3px;
+      font-size: 15px;
+      letter-spacing: -.2px;
+    }
+    .item p{
+      margin: 0;
+      color: var(--muted);
+      font-size: 13.3px;
+      line-height: 1.45;
+    }
+
+    /* Sections */
+    .section{
+      margin-top: 18px;
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    @media (max-width: 920px){ .section{ grid-template-columns:1fr; } }
+    .section .card{ border-radius: var(--radius2); }
+    .section h2{
+      margin: 0 0 8px;
+      font-size: 18px;
+      letter-spacing: -.2px;
+    }
+    .note{
+      padding: 14px;
+      border-radius: var(--radius);
+      border: 1px dashed rgba(234,240,255,.22);
+      color: var(--muted);
+      background: rgba(255,255,255,.03);
+      line-height:1.55;
+      font-size: 13.5px;
+    }
+
+    /* Footer */
+    footer{
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px solid var(--line);
+      color: rgba(234,240,255,.55);
+      font-size: 12.5px;
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:space-between;
+      gap:10px;
+    }
+    .mono{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+
+    /* Floating CTA */
+    .float{
+      position: fixed;
+      right: 16px;
+      bottom: 16px;
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+      z-index: 50;
+    }
+    @media (max-width: 920px){
+      .float{ left: 16px; right: 16px; }
+      .float .btn{ width:100%; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="inner">
+      <div class="brand" aria-label="Marca">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <div style="font-size:14px; font-weight:900;">💎 DIAMANTES FREE FIRE</div>
+          <div style="font-size:12px; color:rgba(234,240,255,.62); margin-top:2px;">Recarga rápida • Segurança • Garantia</div>
+        </div>
+      </div>
+
+      <div class="nav-actions">
+        <a class="btn" href="#precos">Ver preços</a>
+        <a class="btn primary" href="#contato">Comprar agora</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="card">
+        <div class="pad">
+          <div class="pill-row">
+            <span class="pill">✅ <strong>Garantia</strong> total</span>
+            <span class="pill">⚡ <strong>Processo</strong> rápido</span>
+            <span class="pill">🔒 <strong>Confiável</strong> e seguro</span>
+          </div>
+
+          <h1>Diamantes mais baratos, com recarga garantida.</h1>
+          <p class="sub">
+            Está pagando caro em diamantes? Aqui você economiza e recebe com segurança.
+            Trabalhamos apenas com recargas <strong>a partir de 1.060 diamantes</strong>.
+          </p>
+
+          <div class="cta-row">
+            <!-- Telegram (principal) -->
+            <a class="btn green" id="contato"
+               href="https://t.me/McLovin_101" target="_blank" rel="noopener">
+              📲 Chamar no Telegram
+            </a>
+
+            <!-- WhatsApp (opcional) -->
+            <a class="btn" href="https://wa.me/5500000000000?text=Quero%20comprar%20diamantes%20Free%20Fire.%20Pode%20me%20passar%20os%20dados%20e%20o%20prazo%3F"
+               target="_blank" rel="noopener">
+              💬 WhatsApp (opcional)
+            </a>
+          </div>
+
+          <p class="tiny">
+            Ao clicar em “Chamar no Telegram”, você fala direto no atendimento.
+            Responda com a quantidade desejada e seu ID do Free Fire (quando solicitado).
+          </p>
+
+          <div id="precos" class="grid" aria-label="Tabela de preços">
+            <div class="price">
+              <div class="left">
+                <div class="title">1.060 diamantes</div>
+                <div class="meta">Recarga a partir desse pacote</div>
+              </div>
+              <div class="value">R$ 22,00</div>
+            </div>
+
+            <div class="price">
+              <div class="left">
+                <div class="title">2.180 diamantes</div>
+                <div class="meta">Mais custo-benefício</div>
+              </div>
+              <div class="value">R$ 50,00</div>
+            </div>
+
+            <div class="price">
+              <div class="left">
+                <div class="title">5.600 diamantes</div>
+                <div class="meta">Pra quem recarrega forte</div>
+              </div>
+              <div class="value">R$ 110,00</div>
+            </div>
+
+            <div class="price">
+              <div class="left">
+                <div class="title">22.400 diamantes</div>
+                <div class="meta">Top para revenda / clã</div>
+              </div>
+              <div class="value">R$ 350,00</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="card" aria-label="Informações">
+        <div class="pad">
+          <h2 style="margin:0 0 8px; font-size:18px;">📌 Informações importantes</h2>
+
+          <div class="list">
+            <div class="item">
+              <div class="dot" aria-hidden="true">🎯</div>
+              <div>
+                <h3>Somente a partir de 1.060</h3>
+                <p>Trabalhamos com recargas a partir de <strong>1.060 diamantes</strong>.</p>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="dot" aria-hidden="true">⚡</div>
+              <div>
+                <h3>Rápido e confiável</h3>
+                <p>Processo direto, sem enrolação. Atendimento no Telegram.</p>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="dot" aria-hidden="true">✅</div>
+              <div>
+                <h3>Garantia</h3>
+                <p><strong>Recarga garantida</strong> ou seu dinheiro de volta.</p>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="dot" aria-hidden="true">🤝</div>
+              <div>
+                <h3>Revenda</h3>
+                <p>Quer revender? Negociamos valores especiais por volume.</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:12px" class="note">
+            <strong style="color:var(--text)">Dica:</strong> Para agilizar, mande no Telegram:
+            <span class="mono">quantidade + forma de pagamento</span> (e o que você precisar para a recarga).
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section" aria-label="Seções extras">
+      <div class="card">
+        <div class="pad">
+          <h2>✅ Como comprar</h2>
+          <div class="note">
+            <ol style="margin:0; padding-left: 18px;">
+              <li>Escolha o pacote na tabela.</li>
+              <li>Clique em <strong>Chamar no Telegram</strong>.</li>
+              <li>Envie a quantidade desejada.</li>
+              <li>Finalize o pagamento e aguarde a recarga.</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="pad">
+          <h2>🛡️ Garantia sem enrolação</h2>
+          <div class="note">
+            Se houver qualquer problema na recarga, resolvemos.
+            <strong style="color:var(--text)">Recarga garantida</strong> ou
+            <strong style="color:var(--text)">dinheiro de volta</strong>.
+          </div>
+
+          <div style="margin-top:12px; display:flex; gap:10px; flex-wrap:wrap;">
+            <a class="btn primary" href="https://t.me/McLovin_101" target="_blank" rel="noopener">
+              📲 Comprar no Telegram
+            </a>
+            <a class="btn" href="#precos">💰 Ver tabela</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span class="mono">Diamantes Free Fire</span> — atendimento via Telegram.</div>
+      <div class="mono">Telegram: @McLovin_101</div>
+    </footer>
+  </main>
+
+  <!-- CTA flutuante -->
+  <div class="float" aria-label="Ações rápidas">
+    <a class="btn green" href="https://t.me/McLovin_101" target="_blank" rel="noopener">
+      📲 Comprar no Telegram
+    </a>
+    <a class="btn" href="#precos">💰 Ver preços</a>
+  </div>
+</body>
+</html>
